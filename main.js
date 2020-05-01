@@ -24,7 +24,18 @@ new Vue ({
           alertEnterGreeting() {
             this.alertMessage = 'You typed and pressed Enter!';
           },
-          
+
+          //v-if methods
+          changeCity() {
+            if (this.city === 'Toronto') {
+              this.city = 'Lagos';
+              this.cityImage = 'https://bit.ly/2Rd4gQ3';
+            } else {
+              this.city = 'Toronto';
+              this.cityImage = 'https://bit.ly/2SKJPqJ';
+            }
+          }
+
 
     },
 
