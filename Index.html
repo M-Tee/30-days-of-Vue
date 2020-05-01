@@ -15,7 +15,7 @@
         <h2> {{ greeting }} </h2>
         <!-- <p>by {{ user }} who lives in {{ city }}</p> -->
 
-        
+
         <!-- VUE DIRECTIVES -->
         <!-- <p>{{alertMessage}}</p>
         <button v-on:click="changeGreeting"> Change Greeting </button>
@@ -25,20 +25,28 @@
         <input v-on:keyup="alertMessageGreeting" placeholder="Type something" />
         <input v-on:keyup.enter="alertEnterGreeting" placeholder="Type and release Enter" /> -->
 
+
         <!-- V-IF -->
-        <p v-if="city === 'Toronto'">
+        <!-- <p v-if="city === 'Toronto'">
             by {{ user }} who loves {{ city }}
           </p>
           <p v-if="city === 'Lagos'">
             by {{ user }} who wishes to visit {{ city }}
-          </p>
+          </p> -->
 
-      <img v-bind:src="cityImage" />
-      <button v-on:click="changeCity">
-        Change City
-      </button>
 
-        
+        <!-- V-SHOW -->
+        <p v-show="city === 'Toronto'">
+            by {{ user }} who loves {{ city }}
+        </p>
+        <p v-show="city === 'Lagos'">
+            by {{ user }} who wishes to visit {{ city }}
+        </p>
+
+        <img v-bind:src="cityImage" />
+        <button v-on:click="changeCity">
+            Change City
+        </button>
     </div>
 
     <script src="https://unpkg.com/vue"></script>
