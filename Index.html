@@ -11,45 +11,67 @@
 </head>
 
 <body>
-    <div id="app">
-        <h2> {{ greeting }} </h2>
-        <!-- <p>by {{ user }} who lives in {{ city }}</p> -->
+    <section>
+        <div id="app">
+            <h2> {{ greeting }} </h2>
+            <!-- <p>by {{ user }} who lives in {{ city }}</p> -->
 
 
-        <!-- VUE DIRECTIVES -->
-        <!-- <p>{{alertMessage}}</p>
-        <button v-on:click="changeGreeting"> Change Greeting </button>
-        <button v-on:dblclick="changeGreeting">
-            Double click to change greeting
-        </button>
-        <input v-on:keyup="alertMessageGreeting" placeholder="Type something" />
-        <input v-on:keyup.enter="alertEnterGreeting" placeholder="Type and release Enter" /> -->
+            <!-- VUE DIRECTIVES -->
+            <!-- <p>{{alertMessage}}</p>
+                    <button v-on:click="changeGreeting"> Change Greeting </button>
+                    <button v-on:dblclick="changeGreeting">
+                        Double click to change greeting
+                    </button>
+                    <input v-on:keyup="alertMessageGreeting" placeholder="Type something" />
+                    <input v-on:keyup.enter="alertEnterGreeting" placeholder="Type and release Enter" /> -->
 
 
-        <!-- V-IF -->
-        <!-- <p v-if="city === 'Toronto'">
-            by {{ user }} who loves {{ city }}
-          </p>
-          <p v-if="city === 'Lagos'">
-            by {{ user }} who wishes to visit {{ city }}
-          </p> -->
+            <!-- V-IF -->
+            <!-- <p v-if="city === 'Toronto'">
+                        by {{ user }} who loves {{ city }}
+                      </p>
+                      <p v-if="city === 'Lagos'">
+                        by {{ user }} who wishes to visit {{ city }}
+                      </p> -->
 
 
-        <!-- V-SHOW -->
-        <p v-show="city === 'Toronto'">
-            by {{ user }} who loves {{ city }}
-        </p>
-        <p v-show="city === 'Lagos'">
-            by {{ user }} who wishes to visit {{ city }}
-        </p>
+            <!-- V-SHOW -->
+            <p v-show="city === 'Toronto'">
+                by {{ user }} who loves {{ city }}
+            </p>
+            <p v-show="city === 'Lagos'">
+                by {{ user }} who wishes to visit {{ city }}
+            </p>
 
-        <img v-bind:src="cityImage" />
-        <button v-on:click="changeCity">
-            Change City
-        </button>
+            <img v-bind:src="cityImage" />
+            <button v-on:click="changeCity">
+                Change City
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- V_FOR -->
+    <div id="list">
+        <ul>
+            <li v-for="number in numbers">{{ number }}</li>
+        </ul>
+    </div>
+
+    <div id="shuffle-list">
+        <ul>
+            <li v-for="point in points" :key="point.id">
+                <p> {{point.value}} </p>
+                <input type="text" placeholder="Type something...">
+            </li>
+        </ul>
+        <button @click="shuffle"> shuffle </button>
     </div>
 
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.js"></script>
     <script src="main.js"></script>
 
 
