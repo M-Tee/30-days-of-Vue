@@ -87,3 +87,23 @@ new Vue({
     }
   }
 });
+
+// METHODS AND COMPUTED PROPERTIES
+new Vue({
+  el: '#reverse-app',
+  data: {
+    message: 'Greetings!',
+  },
+  // methods: {
+  //   reverseString(string) {
+  //     return string.split('').reverse().join('');
+  //   },
+  // }
+  
+// Used in place of methods for data manipulation
+  computed: {
+    reverseMessage() {
+      return this.message.split('').reverse().join('');
+    }
+  },
+});
