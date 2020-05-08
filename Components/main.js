@@ -41,6 +41,7 @@ Vue.component('tweet-component', {
   `,
 props:['tweet']
 });
+  this.$emit ('add',tweeet)
 const tweets = [
     {
       id: 1,
