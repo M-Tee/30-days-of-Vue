@@ -107,3 +107,18 @@ new Vue({
     }
   },
 });
+
+// let rendercomponet = {
+//     render(h){
+//         return h(
+//             'div', {
+//                 'attrs': {
+//                     class: 'article two'
+//                 },
+//             },[
+//                     h('h2', {},this.message)
+//                 ]          
+//             );
+//     },
+//     props:['message']
+// };
