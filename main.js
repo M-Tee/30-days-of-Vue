@@ -108,7 +108,7 @@ new Vue({
   },
 });
 
-// let rendercomponet = {
+// let rendercomponent = {
 //     render(h){
 //         return h(
 //             'div', {
