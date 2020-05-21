@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2> {{message}} </h2>
-        <app-input :msg= "message"></app-input>
+        <app-input :msg= "message" @messageChanged="message = $event"></app-input>
     </div>
 </template>
 
